@@ -1,4 +1,93 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 800;
+    position: relative;
+    animation: pop-in .4s .2s ease-in-out both;
+    background-color: white;
+    z-index: 50;
+}
+
+@keyframes pop-in{
+    0%{
+        transform: scale(0%);
+    }
+    70%{
+        transform: scale(130%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+.subtitle{
+    margin: 0;
+    font-family: "Jersey 15";
+    font-size: 3rem;
+    font-weight: bold;
+    color: #BA2525;
+    animation: slide-down .3s ease-in-out 1.5s both;
+    z-index: 0;
+}
+
+@keyframes slide-down{
+    0%{
+        visibility: hidden;
+        transform: translateY(-70px);
+    }
+    70%{
+        visibility: visible;
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.socials{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.socials__link{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    animation: pop-in .4s 2.5s ease-in-out both;
+}
+
+.socials__link:hover .fa-brands{
+    transform: scale(1.2);
+}
+
+.fa-brands{
+    font-size: 2rem;
+    transition: transform .3s ease-in-out;
+}
+
+@media screen and (max-width: 458px){
+    .title{
+        font-size: 3rem;
+    }
+    .subtitle{
+        font-size: 2rem;
+    }
+    .socials__link{
+        font-size: 1.5rem;
+    }
     
 }
