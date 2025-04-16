@@ -1,4 +1,4 @@
-body{
+.body{
     font-family: 'Montserrat', sans-serif;
     background-color: #f3f3f3;
     margin: 0;
@@ -22,7 +22,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 800;
     position: relative;
     animation: pop-in .4s .2s ease-in-out both;
