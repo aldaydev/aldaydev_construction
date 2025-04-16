@@ -1,11 +1,20 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: #f3f3f3;
     margin: 0;
     height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .title{
@@ -17,7 +26,7 @@ body{
     font-weight: 800;
     position: relative;
     animation: pop-in .4s .2s ease-in-out both;
-    background-color: white;
+    background-color: #f3f3f3;
     z-index: 50;
 }
 
@@ -36,17 +45,33 @@ body{
 .subtitle{
     margin: 0;
     font-family: "Jersey 15";
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: bold;
     color: #BA2525;
     animation: slide-down .3s ease-in-out 1.5s both;
+    position: relative;
+    top: -45%;
     z-index: 0;
 }
 
 @keyframes slide-down{
     0%{
         visibility: hidden;
-        transform: translateY(-70px);
+        top: -45%;
+    }
+    70%{
+        visibility: visible;
+        top: 15%;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+/* @keyframes slide-down{
+    0%{
+        visibility: hidden;
+        transform: translateY(-75px);
     }
     70%{
         visibility: visible;
@@ -55,7 +80,7 @@ body{
     100%{
         transform: translateY(0px);
     }
-}
+} */
 
 .socials{
     margin-top: 30px;
@@ -85,6 +110,19 @@ body{
     }
     .subtitle{
         font-size: 2rem;
+    }
+    .socials__link{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 320px){
+    .title{
+        font-size: 2.4rem;
+    }
+    .subtitle{
+        font-size: 1.8rem;
     }
     .socials__link{
         font-size: 1.5rem;
