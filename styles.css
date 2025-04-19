@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4.5rem;
+    font-size: 6.5rem;
     font-weight: 800;
     position: relative;
     animation: pop-in .4s .2s ease-in-out both;
@@ -45,7 +45,7 @@
 .subtitle{
     margin: 0;
     font-family: "Jersey 15";
-    font-size: 2.8rem;
+    font-size: 4rem;
     font-weight: bold;
     color: #BA2525;
     animation: slide-down .3s ease-in-out 1.5s both;
@@ -85,7 +85,7 @@
 .socials{
     margin-top: 30px;
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 
 .socials__link{
@@ -95,29 +95,41 @@
     animation: pop-in .4s 2.5s ease-in-out both;
 }
 
+.socials__link:first-child{
+    animation: pop-in .4s 2.5s ease-in-out both;
+}
+
+.socials__link:nth-child(2){
+    animation: pop-in .4s 2.7s ease-in-out both;
+}
+
+.socials__link:nth-child(3){
+    animation: pop-in .4s 2.9s ease-in-out both;
+}
+
 .socials__link:hover .fa-brands{
     transform: scale(1.2);
 }
 
 .fa-brands{
-    font-size: 2rem;
+    font-size: 4rem;
     transition: transform .3s ease-in-out;
 }
 
-@media screen and (max-width: 458px){
+@media screen and (max-width: 680px){
     .title{
-        font-size: 3rem;
+        font-size: 13vw;
     }
     .subtitle{
-        font-size: 2rem;
+        font-size: 8vw;
     }
-    .socials__link{
-        font-size: 1.5rem;
+    .fa-brands{
+        font-size: 12vw;
     }
     
 }
 
-@media screen and (max-width: 320px){
+/* @media screen and (max-width: 490px){
     .title{
         font-size: 2.4rem;
     }
@@ -128,4 +140,4 @@
         font-size: 1.5rem;
     }
     
-}
+} */
